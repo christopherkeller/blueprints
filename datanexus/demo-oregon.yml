@@ -1,0 +1,95 @@
+---
+# tenant (assume this is AWS profile name)
+datanexus:
+  demo:
+    aws:
+      vpc:
+        - region: us-west-2
+        - zone: a
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - metrics: 10.10.3.0/24
+        - domain: development
+      jumphost:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.2.0/24
+        - public: 10.10.1.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - count: 1
+        - domain: development
+      postgresql-replica:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
+      kafka:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
+      spark:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
+      zookeeper:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
+      cassandra:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
+      solr:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-d2c924b2
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 1
+        - domain: development
+        - private_interface_acl: open
