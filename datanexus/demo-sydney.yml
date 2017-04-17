@@ -3,24 +3,24 @@
 datanexus:
   demo:
     aws:
-      # vpc:
-      #   - region: ap-southeast-2
-      #   - zone: a
-      #   - network: 10.10.0.0/16
-      #   - private: 10.10.1.0/24
-      #   - public: 10.10.2.0/24
-      #   - metrics: 10.10.3.0/24
-      #   - domain: development
-      # jumphost:
-      #   - region: ap-southeast-2
-      #   - network: 10.10.0.0/16
-      #   - private: 10.10.2.0/24
-      #   - public: 10.10.1.0/24
-      #   - ami: ami-fedafc9d
-      #   - user: centos
-      #   - type: t2.micro
-      #   - count: 1
-      #   - domain: development
+      vpc:
+        - region: ap-southeast-2
+        - zone: a
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - metrics: 10.10.3.0/24
+        - domain: development
+      jumphost:
+        - region: ap-southeast-2
+        - network: 10.10.0.0/16
+        - private: 10.10.2.0/24
+        - public: 10.10.1.0/24
+        - ami: ami-fedafc9d
+        - user: centos
+        - type: t2.micro
+        - count: 1
+        - domain: development
       postgresql-replica:
         - region: ap-southeast-2
         - network: 10.10.0.0/16
