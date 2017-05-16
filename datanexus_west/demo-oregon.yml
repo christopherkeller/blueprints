@@ -1,6 +1,6 @@
 ---
 # tenant (assume this is AWS profile name)
-datanexus:
+datanexus_west:
   demo:
     aws:
       vpc:
@@ -16,7 +16,7 @@ datanexus:
         - network: 10.10.0.0/16
         - private: 10.10.2.0/24
         - public: 10.10.1.0/24
-        - ami: ami-d2c924b2
+        - ami: ami-f4533694
         - user: centos
         - type: t2.micro
         - count: 1
@@ -26,7 +26,7 @@ datanexus:
         - network: 10.10.0.0/16
         - private: 10.10.1.0/24
         - public: 10.10.2.0/24
-        - ami: ami-d2c924b2
+        - ami: ami-f4533694
         - user: centos
         - type: t2.micro
         - data: 10
@@ -39,7 +39,7 @@ datanexus:
         - network: 10.10.0.0/16
         - private: 10.10.1.0/24
         - public: 10.10.2.0/24
-        - ami: ami-d2c924b2
+        - ami: ami-f4533694
         - user: centos
         - type: t2.micro
         - data: 10
@@ -51,7 +51,7 @@ datanexus:
       #   - network: 10.10.0.0/16
       #   - private: 10.10.1.0/24
       #   - public: 10.10.2.0/24
-      #   - ami: ami-d2c924b2
+      #   - ami: ami-f4533694
       #   - user: centos
       #   - type: t2.micro
       #   - data: 10
@@ -63,7 +63,7 @@ datanexus:
       #   - network: 10.10.0.0/16
       #   - private: 10.10.1.0/24
       #   - public: 10.10.2.0/24
-      #   - ami: ami-d2c924b2
+      #   - ami: ami-f4533694
       #   - user: centos
       #   - type: t2.micro
       #   - data: 10
@@ -75,31 +75,43 @@ datanexus:
       #   - network: 10.10.0.0/16
       #   - private: 10.10.1.0/24
       #   - public: 10.10.2.0/24
-      #   - ami: ami-d2c924b2
+      #   - ami: ami-f4533694
       #   - user: centos
       #   - type: t2.micro
       #   - data: 10
       #   - count: 1
       #   - domain: development
       #   - private_interface_acl: open
-      # cassandra:
-      #   - region: us-west-2
-      #   - network: 10.10.0.0/16
-      #   - private: 10.10.1.0/24
-      #   - public: 10.10.2.0/24
-      #   - ami: ami-d2c924b2
-      #   - user: centos
-      #   - type: t2.micro
-      #   - data: 10
-      #   - count: 1
-      #   - domain: development
-      #   - private_interface_acl: open
+      cassandra-seed:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-f4533694
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 2
+        - domain: development
+        - private_interface_acl: open
+      cassandra:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-f4533694
+        - user: centos
+        - type: t2.micro
+        - data: 10
+        - count: 3
+        - domain: development
+        - private_interface_acl: open  
       # solr:
       #   - region: us-west-2
       #   - network: 10.10.0.0/16
       #   - private: 10.10.1.0/24
       #   - public: 10.10.2.0/24
-      #   - ami: ami-d2c924b2
+      #   - ami: ami-f4533694
       #   - user: centos
       #   - type: t2.micro
       #   - data: 10
