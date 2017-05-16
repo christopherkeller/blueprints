@@ -1,6 +1,6 @@
 ---
 # tenant (assume this is AWS profile name)
-datanexus:
+iag_dev:
   demo:
     osp:
       # vpc:
@@ -13,9 +13,7 @@ datanexus:
       #   - domain: development
       jumphost:
         - region: regionOne
-#        - network: 10.10.0.0/16
         - private: 34056c56-88aa-48ca-b753-bacaed319246
-#        - public: 10.10.1.0/24
         - ami: 1487de89-4f28-4c56-bdb3-15c425a1dbb7
         - user: cloud-user
         - type: pre.small
