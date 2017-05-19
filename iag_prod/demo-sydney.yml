@@ -1,6 +1,6 @@
 ---
 # tenant (assume this is AWS profile name)
-iag_dev:
+iag_prod:
   demo:
     osp:
       # vpc:
@@ -13,14 +13,15 @@ iag_dev:
       #   - domain: development
       jumphost:
         - region: regionOne
-        - public: 34056c56-88aa-48ca-b753-bacaed319246
-        - float: external
+        - private: 0a82a8f4-9c36-4f3d-9a52-492b591f5a7f
+        - public: 4bdada86-dce1-4642-9cef-706b3e82c4cd
+        - float: external 
         - ami: 1487de89-4f28-4c56-bdb3-15c425a1dbb7
         - user: cloud-user
-        - type: pre.small
+        - type: prod.small
         - count: 1
         - domain: development
-        - zone: preproduction
+        - zone: production
      #  cassandra-seed:
 #         - region: regionOne
 #         - private: 34056c56-88aa-48ca-b753-bacaed319246
