@@ -1,0 +1,132 @@
+---
+# tenant (assume this is AWS profile name)
+datanexus_west:
+  demo:
+    aws:
+      vpc:
+        - region: us-west-2
+        - zone: a
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - metrics: 10.10.3.0/24
+        - domain: development
+      # jumphost:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.2.0/24
+      #   - public: 10.10.1.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - root: 8
+      #   - count: 1
+      #   - domain: development
+      # postgresql-master:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.1.0/24
+      #   - public: 10.10.2.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - root: 20
+      #   - data: 10
+      #   - count: 1
+      #   - domain: development
+      #   - cluster: a
+      #   - private_interface_acl: open
+      #   - public_interface_acl: postgresql
+      # postgresql-replica:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.1.0/24
+      #   - public: 10.10.2.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - root: 20
+      #   - data: 10
+      #   - count: 2
+      #   - domain: development
+      #   - cluster: a
+      #   - private_interface_acl: open
+      #   - public_interface_acl: postgresql
+      # kafka:
+     #    - region: us-west-2
+     #    - network: 10.10.0.0/16
+     #    - private: 10.10.1.0/24
+     #    - public: 10.10.2.0/24
+     #    - ami: ami-f4533694
+     #    - user: centos
+     #    - type: t2.micro
+     #    - root: 20
+     #    - data: 10
+     #    - count: 1
+     #    - domain: development
+     #    - cluster: a
+     #    - private_interface_acl: open
+      # spark:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.1.0/24
+      #   - public: 10.10.2.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - data: 10
+      #   - count: 1
+      #   - domain: development
+      #   - private_interface_acl: open
+      # zookeeper:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.1.0/24
+      #   - public: 10.10.2.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - data: 10
+      #   - count: 1
+      #   - domain: development
+      #   - private_interface_acl: open
+      cassandra-seed:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-f4533694
+        - user: centos
+        - type: t2.micro
+        - root: 20
+        - data: 10
+        - count: 2
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+      cassandra:
+        - region: us-west-2
+        - network: 10.10.0.0/16
+        - private: 10.10.1.0/24
+        - public: 10.10.2.0/24
+        - ami: ami-f4533694
+        - user: centos
+        - type: t2.micro
+        - root: 20
+        - data: 10
+        - count: 3
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+      # solr:
+      #   - region: us-west-2
+      #   - network: 10.10.0.0/16
+      #   - private: 10.10.1.0/24
+      #   - public: 10.10.2.0/24
+      #   - ami: ami-f4533694
+      #   - user: centos
+      #   - type: t2.micro
+      #   - data: 10
+      #   - count: 1
+      #   - domain: development
+      #   - private_interface_acl: open

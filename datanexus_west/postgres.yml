@@ -1,0 +1,18 @@
+postgresql:
+  interface:
+    - private: eth0
+    - public: eth1
+    - metrics: eth1
+  sg:
+    region:
+      - "{{ ec2_region }}"
+    vpc:
+      - "{{ vpc }}"
+    rules:
+      ingress:
+        tcp:
+          - 5432:5432: 10.10.2.0/24
+        udp:
+      egress:
+        all:
+          - 1:65535: 0.0.0.0/0
