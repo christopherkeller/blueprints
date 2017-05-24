@@ -1,4 +1,9 @@
 # (c) 2016 DataNexus Inc.  All Rights Reserved.
 #
-# tenant specific changes should go here
+# tenant specific code should go here
 ---
+- include_role:
+    name: common-roles/install-packages
+  vars:
+    package_list: "{{ (default_packages|default([])) }}"
+
