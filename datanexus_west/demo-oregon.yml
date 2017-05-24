@@ -13,9 +13,10 @@ datanexus_west:
         - domain: development
       # jumphost:
       #   - region: us-west-2
-      #   - network: 10.10.0.0/16
-      #   - private: 10.10.2.0/24
-      #   - public: 10.10.1.0/24
+      #   - network: 10.10.0.0/16   
+      #   - interfaces:
+      #       private: 10.10.2.0/24
+      #       public: 10.10.1.0/24
       #   - ami: ami-f4533694
       #   - user: centos
       #   - type: t2.micro
