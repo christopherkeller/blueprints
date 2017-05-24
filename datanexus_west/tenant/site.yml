@@ -2,4 +2,3 @@
 #
 # Variables that are specific to tenant deployments, such as packages, proxies, etc
 ---
-tenant: datanexus
