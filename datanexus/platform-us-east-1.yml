@@ -1,0 +1,152 @@
+---
+datanexus:
+  demo:
+    aws:
+      vpc:
+        - region: us-east-1
+        - zone: a
+        - cidr_block: 10.10.0.0/16
+        - subnets: 
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+            metrics: 10.10.3.0/24
+        - domain: development
+      jumphost:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.2.0/24
+            public: 10.10.1.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 8
+        - count: 1
+        - domain: development
+        - private_interface_acl: ssh
+        - public_interface_acl: open
+      postgresql-master:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 1
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+        - public_interface_acl: postgresql
+      postgresql-replica:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 1
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+        - public_interface_acl: postgresql
+      kafka:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 3
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+        - public_interface_acl: kafka
+      cassandra-seed:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 3
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+        - public_interface_acl: cassandra
+      cassandra:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 3
+        - domain: development
+        - cluster: a
+        - private_interface_acl: open
+        - public_interface_acl: cassandra
+      zookeeper:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 3
+        - domain: development
+        - private_interface_acl: open
+        - public_interface_acl: closed
+      spark:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 2
+        - domain: development
+        - private_interface_acl: open
+        - public_interface_acl: closed
+      solr:
+        - region: us-east-1
+        - cidr_block: 10.10.0.0/16
+        - subnets:
+            private: 10.10.1.0/24
+            public: 10.10.2.0/24
+        - ami: ami-46c1b650
+        - user: centos
+        - type: t2.micro
+        - root: 11
+        - data: 11
+        - count: 2
+        - domain: development
+        - private_interface_acl: open
+        - public_interface_acl: solr
